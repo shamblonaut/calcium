@@ -1,5 +1,6 @@
 let digits = document.querySelectorAll(".btn-num");
 let result = document.querySelector(".result");
+let clear = document.getElementById("btn-clear");
 
 digits.forEach((digit) => {
   digit.addEventListener("click", (event) => {
@@ -9,4 +10,8 @@ digits.forEach((digit) => {
 
     result.textContent += digit.textContent;
   });
+});
+
+clear.addEventListener("click", (event) => {
+  result.textContent = "0";
 });
